@@ -1,67 +1,138 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CAP Garland, LLC</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f0f0f0;
-      color: #333;
-    }
-    header {
-      background-color: #003366;
-      color: white;
-      padding: 30px 20px;
-      text-align: center;
-    }
-    section {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-    h1, h2 {
-      color: #003366;
-    }
-    .contact {
-      background: #fff;
-      padding: 20px;
-      border-left: 5px solid #003366;
-      margin-top: 30px;
-    }
-    footer {
-      background-color: #003366;
-      color: white;
-      text-align: center;
-      padding: 15px;
-      margin-top: 50px;
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Innova Healthcare LLC — Coming Soon</title>
+<meta name="description" content="Innova Healthcare LLC • Healthcare innovation and patient-focused solutions. Coming soon to Riverside, CA.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #ffffff;
+    --secondary: #0f172a;
+    --accent: #00bcd4;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: Inter, system-ui, Arial, sans-serif;
+    background: var(--secondary);
+    color: var(--primary);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  header {
+    text-align: center;
+    padding: 60px 16px 30px;
+  }
+  header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    color: var(--primary);
+  }
+  header p {
+    margin: 8px 0 0;
+    opacity: 0.9;
+  }
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+  .hero img {
+    max-width: 220px;
+    border-radius: 50%;
+    border: 4px solid var(--primary);
+    margin-bottom: 24px;
+  }
+  .hero h2 {
+    font-size: 1.8rem;
+    margin: 0 0 10px;
+  }
+  .hero p {
+    font-size: 1rem;
+    max-width: 600px;
+    line-height: 1.6;
+    margin: 0 auto 20px;
+  }
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 14px;
+    margin: 20px auto;
+    max-width: 1100px;
+    padding: 0 16px;
+  }
+  .gallery img {
+    width: 100%;
+    border-radius: 12px;
+    border: 3px solid var(--primary);
+    object-fit: cover;
+    aspect-ratio: 4 / 3;
+  }
+  .contact {
+    text-align: center;
+    background: #1e293b;
+    padding: 30px 16px;
+    margin-top: auto;
+  }
+  .contact a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .btn {
+    display: inline-block;
+    background: var(--accent);
+    color: var(--secondary);
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: 700;
+    margin-top: 10px;
+  }
+  footer {
+    text-align: center;
+    background: #000;
+    padding: 12px;
+    color: var(--primary);
+    border-top: 4px solid var(--accent);
+  }
+</style>
 </head>
 <body>
-  <header>
-    <h1>CAP Garland, LLC</h1>
-    <p>Private Investment Fund</p>
-  </header>
 
-  <section>
-    <h2>About Us</h2>
-    <p>CAP Garland, LLC is a Washington-based private investment fund focused on delivering value through diversified investment strategies.</p>
+<header>
+  <h1>Innova Healthcare LLC</h1>
+  <p>Healthcare Innovation • Riverside, CA 92503</p>
+</header>
 
-    <h2>Contact</h2>
-    <div class="contact">
-      <p><strong>Address:</strong> 915 W 2nd Ave, Spokane, WA 99201</p>
-      <p><strong>Email:</strong> <a href="mailto:ryanberg@capgarland.shop">ryanberg@capgarland.shop</a></p>
-      <p><strong>Phone:</strong> (509) 822-3850</p>
-    </div>
-  </section>
+<section class="hero">
+  <img src="https://www.avenue-des-parfums.fr/modules/pm_advancedtopmenu/column_icons/195-fr.png" alt="Innova Healthcare Logo">
+  <h2>COMING SOON</h2>
+  <p>We’re building something transformative in healthcare — combining innovation, care, and technology to improve patient outcomes. Stay tuned for the official launch.</p>
+  <a class="btn" href="mailto:Admin@tradepilot.shop">Notify Me</a>
+</section>
 
-  <footer>
-    &copy; 2025 CAP Garland, LLC. All rights reserved.
-  </footer>
+<section class="gallery">
+  <img src="https://blogs.dentalkart.com/wp-content/uploads/2024/10/Blog-image-8-1.jpg" alt="Medical innovation">
+  <img src="https://www.chamber.org.il/media/150933/25767_s.jpg" alt="Healthcare collaboration">
+  <img src="https://avatars.mds.yandex.net/i?id=c4249c5554fea752d1211c8ba360fd6c_l-5527569-images-thumbs&ref=rim&n=13&w=2392&h=1754" alt="Modern clinic">
+</section>
+
+<section class="contact">
+  <p>📧 <strong>Email:</strong> <a href="mailto:Admin@tradepilot.shop">Admin@tradepilot.shop</a></p>
+  <p>📞 <strong>Phone:</strong> <a href="tel:+17747345670" style="color:#fff">+1 (774) 734‑5670</a></p>
+  <p>📍 <strong>Address:</strong> Carrotwood Dr, Riverside, CA 92503</p>
+</section>
+
+<footer>
+  <p>&copy; 2025 Innova Healthcare LLC — COMING SOON</p>
+</footer>
+
 </body>
 </html>
