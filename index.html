@@ -102,7 +102,33 @@
     color: var(--primary);
     border-top: 4px solid var(--accent);
   }
+  /* Countdown */
+  .launch{max-width:1100px;margin:10px auto 0;background:#111827;color:#fff;padding:22px;border-radius:12px;border:2px solid var(--accent)}
+  .launch h2{margin:0 0 12px}
+  .timer{display:grid;grid-template-columns:repeat(4,minmax(100px,1fr));gap:12px;text-align:center}
+  .timer div{background:#0b1220;border:1px solid #1f2937;border-radius:12px;padding:14px}
+  .timer span{font-size:2rem;font-weight:800;display:block}
+
+  /* Newsletter */
+  .newsletter{max-width:1100px;margin:16px auto;background:#ffffff10;border:1px solid #334155;padding:22px;border-radius:12px}
+  .newsletter form{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+  .newsletter input[type=email]{flex:1;min-width:240px;padding:12px 14px;border:2px solid #e5e7eb;border-radius:10px}
+  .newsletter button{background:var(--accent);color:var(--secondary);border:0;padding:12px 16px;border-radius:10px;font-weight:800}
+
+  /* Map */
+  .map{max-width:1100px;margin:16px auto;border-radius:12px;overflow:hidden;border:3px solid var(--primary)}
+  .map iframe{width:100%;height:360px;border:0;display:block}
+
+  /* FAQ */
+  .faq{max-width:1100px;margin:16px auto;background:#111827;color:#fff;padding:22px;border-radius:12px;border:2px solid var(--accent)}
+  .faq details{background:#0b1220;border:1px solid #1f2937;border-radius:10px;margin:8px 0;padding:12px}
+  .faq summary{cursor:pointer;font-weight:700}
 </style>
+  <meta property="og:title" content="Innova Healthcare LLC — Coming Soon" />
+  <meta property="og:description" content="Healthcare innovation coming soon to Riverside, CA. Sign up to get notified." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://www.avenue-des-parfums.fr/modules/pm_advancedtopmenu/column_icons/195-fr.png" />
+  <link rel="icon" href="https://www.avenue-des-parfums.fr/modules/pm_advancedtopmenu/column_icons/195-fr.png">
 </head>
 <body>
 
@@ -118,10 +144,45 @@
   <a class="btn" href="mailto:Admin@tradepilot.shop">Notify Me</a>
 </section>
 
+<section class="launch" id="countdown">
+  <h2>Launch Countdown</h2>
+  <div class="timer" aria-live="polite">
+    <div><span id="cd-days">00</span><small>Days</small></div>
+    <div><span id="cd-hours">00</span><small>Hours</small></div>
+    <div><span id="cd-mins">00</span><small>Minutes</small></div>
+    <div><span id="cd-secs">00</span><small>Seconds</small></div>
+  </div>
+</section>
+
+<section class="newsletter" id="notify">
+  <h2 style="text-align:center;margin-top:0">Get Launch Updates</h2>
+  <p style="text-align:center;opacity:.9;margin-top:-6px">Leave your email to be notified when we go live.</p>
+  <form action="mailto:Admin@tradepilot.shop?subject=Notify%20me%20about%20launch" method="post" enctype="text/plain">
+    <input type="email" name="email" placeholder="you@example.com" required aria-label="Email address">
+    <button type="submit">Notify Me</button>
+  </form>
+</section>
+
 <section class="gallery">
   <img src="https://blogs.dentalkart.com/wp-content/uploads/2024/10/Blog-image-8-1.jpg" alt="Medical innovation">
   <img src="https://www.chamber.org.il/media/150933/25767_s.jpg" alt="Healthcare collaboration">
   <img src="https://avatars.mds.yandex.net/i?id=c4249c5554fea752d1211c8ba360fd6c_l-5527569-images-thumbs&ref=rim&n=13&w=2392&h=1754" alt="Modern clinic">
+</section>
+
+<section class="map" id="map">
+  <iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Carrotwood+Dr,+Riverside,+CA+92503&output=embed" title="Map to Innova Healthcare LLC"></iframe>
+</section>
+
+<section class="faq" id="faq">
+  <h2>Questions fréquentes</h2>
+  <details>
+    <summary>Quand est‑ce que le site ouvrira ?</summary>
+    <p>Nous visons un lancement public avant la fin de l’année. Inscrivez‑vous ci‑dessus pour être prévenu en premier.</p>
+  </details>
+  <details>
+    <summary>Comment puis‑je collaborer avec vous ?</summary>
+    <p>Écrivez‑nous à <a href="mailto:Admin@tradepilot.shop" style="color:#67e8f9">Admin@tradepilot.shop</a> avec l’objet « Partnership ».</p>
+  </details>
 </section>
 
 <section class="contact">
@@ -134,5 +195,25 @@
   <p>&copy; 2025 Innova Healthcare LLC — COMING SOON</p>
 </footer>
 
+<script>
+// Simple countdown timer (set your launch date/time here)
+(function(){
+  var launch = new Date('2025-12-01T10:00:00').getTime();
+  var d=document; function id(x){return d.getElementById(x)}
+  function tick(){
+    var now = new Date().getTime();
+    var diff = Math.max(launch - now, 0);
+    var days = Math.floor(diff / (1000*60*60*24));
+    var hours = Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
+    var mins = Math.floor((diff % (1000*60*60)) / (1000*60));
+    var secs = Math.floor((diff % (1000*60)) / 1000);
+    id('cd-days').textContent = String(days).padStart(2,'0');
+    id('cd-hours').textContent = String(hours).padStart(2,'0');
+    id('cd-mins').textContent = String(mins).padStart(2,'0');
+    id('cd-secs').textContent = String(secs).padStart(2,'0');
+  }
+  tick(); setInterval(tick,1000);
+})();
+</script>
 </body>
 </html>
